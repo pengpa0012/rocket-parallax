@@ -1,0 +1,103 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Russo One", sans-serif;
+  background: rgb(29, 17, 53);
+  color: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.container button {
+  font-size: 2rem;
+  padding: 10px 20px;
+  background: rgb(29, 17, 53);
+  border: solid 5px #fff;
+  border-radius: 25px 2px 25px 2px;
+  color: inherit;
+  cursor: pointer;
+  transition: 250ms ease-in;
+  outline: none;
+}
+
+.container button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.container .rocket {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floating ease-in-out 2000ms infinite alternate;
+}
+.container .rocket svg {
+  max-width: 300px;
+}
+
+.space {
+  background: url("./space.svg") no-repeat;
+}
+
+.balloon {
+  background: url("./hot-air-baloon.svg") no-repeat;
+  background-position: right top;
+}
+
+.moon {
+  background: url("./moon-light.svg") no-repeat;
+  background-position: center;
+}
+.space,
+.balloon,
+.moon {
+  background-attachment: fixed;
+}
+
+/* Animation */
+
+@keyframes floating {
+  0% {
+    transform: translate(-50%, 0px);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    transform: translate(-50%, 0px);
+  }
+}
+
+@media (max-width: 720px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .container button {
+    font-size: 1rem;
+    border: solid 2px #fff;
+  }
+}
